@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            box-shadow: 10px 20px 20px red;
+        }
+
+        figure{
+            display: inline-block;
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1{Random Pictures}(figure>img[src="https://picsum.photos/id/$/200/200/"]+figcaption)*2 -->
+    <h1>Ramdom Picture</h1>
+    <div id="app">
+        <!--figure>
+            <img src="https://picsum.photos/id/1/200/200/" alt="Angewomon">
+        <figcaption>John</figcaption>
+        </figure>-->
+    </div>
+
+    <script>
+        const x = document.getElementById("app")
+        console.log("imprime mensaje a consola")
+        console.log(x)
+
+        //x.innerHTML = xy(1) + xy(2) + xy(3) + xy(4) + xy(5) + xy(6) + xy(7) + xy(8) + xy(10) + xy(41)
+
+        function imagen(id) {
+            const c = '<figure>' +
+            '<img src="https://picsum.photos/id/'+id+'/200/200/" alt="Angewomon">' +
+            '<figcaption>John</figcaption>' +
+            '</figure>'
+            return c
+        }
+
+        //const Picture = function (){ return "hola"}
+
+        const Picture = (id) => {
+            return `<figure>
+            <img src="https://picsum.photos/id/${id}/200/200/" alt="Angewomon">
+            <figcaption>John</figcaption>
+            </figure>`
+        };
+        x.innerHTML = Picture(1) + Picture(2) + Picture(3)
+    </script>
+</body>
+</html>
